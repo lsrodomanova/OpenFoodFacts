@@ -1,9 +1,12 @@
 package webtests;
 
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import steps.WebSteps;
+
+import static io.qameta.allure.Allure.step;
 
 @Tag("web")
 public class WebTests extends TestBase{
@@ -14,6 +17,9 @@ public class WebTests extends TestBase{
     @Test
     @DisplayName("Поиск продуктов из списка стран")
     void searchTest() {
+        step("Открыть главную страницу", () -> {
+            Selenide.open("https://world.openfoodfacts.org/");
+        });
 
         steps
                 .searchByCountry()
