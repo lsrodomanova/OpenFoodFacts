@@ -17,10 +17,6 @@ public class WebTests extends TestBase{
     @Test
     @DisplayName("Поиск продуктов из списка стран")
     void searchTest() {
-        step("Открыть главную страницу", () -> {
-            Selenide.open("https://world.openfoodfacts.org/");
-        });
-
         steps
                 .searchByCountry()
                 .chooseCountry();
