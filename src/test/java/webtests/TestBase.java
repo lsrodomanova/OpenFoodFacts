@@ -39,9 +39,7 @@ public class TestBase {
 
     @BeforeEach
     public void openUrl() {
-        step("Открыть главную страницу", () -> {
             Selenide.open("https://world.openfoodfacts.org/");
-        });
     }
 
     @AfterEach

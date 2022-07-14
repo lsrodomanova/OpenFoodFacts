@@ -1,24 +1,16 @@
 package mobiletests;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import config.LocalConfig;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
-
-import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @Tag("android")
-public class MobileTests extends TestBase {
+public class MobileTests extends TestBaseM {
     String login = mobConfig.login(),
             password = mobConfig.password();
 

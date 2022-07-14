@@ -18,7 +18,7 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.AllureAttachments.sessionId;
 import static io.qameta.allure.Allure.step;
 
-public class TestBase {
+public class TestBaseM {
     static LocalConfig mobConfig = ConfigFactory.create(LocalConfig.class);
     static String deviceHost = System.getProperty("deviceHost", "local");
     @BeforeAll
