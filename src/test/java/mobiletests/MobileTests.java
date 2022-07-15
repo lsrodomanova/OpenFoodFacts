@@ -11,8 +11,8 @@ import static io.qameta.allure.Allure.step;
 
 @Tag("android")
 public class MobileTests extends TestBaseM {
-    String login = mobConfig.login(),
-            password = mobConfig.password();
+    String alogin = mobConfig.login(),
+            apassword = mobConfig.password();
 
     @Test
     void onBoardingTest() {
@@ -77,8 +77,8 @@ public class MobileTests extends TestBaseM {
         });
         step("Ввести логин и пароль", () -> {
             //$(AppiumBy.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.EditText")).click();
-            $(AppiumBy.id("org.openfoodfacts.scanner:id/loginInput")).sendKeys(login);
-            $(AppiumBy.id("org.openfoodfacts.scanner:id/pass_input")).sendKeys(password);
+            $(AppiumBy.id("org.openfoodfacts.scanner:id/loginInput")).sendKeys(alogin);
+            $(AppiumBy.id("org.openfoodfacts.scanner:id/pass_input")).sendKeys(apassword);
             $(AppiumBy.id("org.openfoodfacts.scanner:id/btn_login")).click();
             $(AppiumBy.id("org.openfoodfacts.scanner:id/tvDailyFoodFact"))
                     .shouldHave(text("Survey: tell Open Food Facts what to build next"));
