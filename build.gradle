@@ -30,7 +30,6 @@ allure {
 
 dependencies {
     testImplementation(
-
             "io.rest-assured:rest-assured:4.3.1",
             "org.aeonbits.owner:owner:1.0.12",
             "com.fasterxml.jackson.core:jackson-databind:2.11.2",
@@ -44,14 +43,6 @@ dependencies {
             "com.codeborne:selenide:6.5.2",
             "commons-io:commons-io:2.11.0")
 }
-
-dependencies {
-    compileOnly 'org.projectlombok:lombok:1.18.24'
-    annotationProcessor 'org.projectlombok:lombok:1.18.24'
-    testCompileOnly 'org.projectlombok:lombok:1.18.24'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
-}
-
 compileTestJava {
     options.encoding = 'UTF-8'
 }
@@ -65,12 +56,12 @@ task android (type: Test) {
         includeTags 'android'
     }}
 
-    task api (type: Test) {
-        useJUnitPlatform {
-            includeTags 'api'
-        }}
+task api (type: Test) {
+    useJUnitPlatform {
+        includeTags 'api'
+    }}
 
-        task web (type: Test) {
-            useJUnitPlatform {
-                includeTags 'web'
-            }}
+task web (type: Test) {
+    useJUnitPlatform {
+        includeTags 'web'
+    }}
