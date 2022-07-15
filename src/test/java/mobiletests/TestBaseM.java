@@ -35,7 +35,7 @@ public class TestBaseM {
     @BeforeEach
     public void startDriver() {
         addListener("AllureSelenide", new AllureSelenide());
-        open();
+        open("http://hub.browserstack.com/wd/hub");
     }
 
     @AfterEach
