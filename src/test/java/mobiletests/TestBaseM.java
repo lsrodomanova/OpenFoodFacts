@@ -24,18 +24,18 @@ public class TestBaseM {
     @BeforeAll
     public static void setup() {
 
-        /*if (Objects.equals(deviceHost, "local")) {
+        if (Objects.equals(deviceHost, "local")) {
             Configuration.browser = LocalDriver.class.getName();
-        } else {*/
+        } else {
             Configuration.browser = BrowserstackMobileDriver.class.getName();
-        /*}*/
+        }
         Configuration.browserSize = null;
     }
 
     @BeforeEach
     public void startDriver() {
         addListener("AllureSelenide", new AllureSelenide());
-        open("http://hub.browserstack.com/wd/hub");
+        open();
     }
 
     @AfterEach
