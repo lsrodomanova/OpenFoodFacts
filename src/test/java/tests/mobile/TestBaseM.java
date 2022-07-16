@@ -1,11 +1,8 @@
-package mobiletests;
+package tests.mobile;
 
-import config.LocalConfig;
 import helpers.AllureAttachments;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import drivers.BrowserstackMobileDriver;
-import drivers.LocalDriver;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;

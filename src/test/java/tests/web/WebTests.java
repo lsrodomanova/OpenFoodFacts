@@ -1,14 +1,12 @@
-package webtests;
+package tests.web;
 
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import steps.WebSteps;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("web")
+@Tag("tests/web")
 public class WebTests extends TestBase{
 
     WebSteps steps = new WebSteps();

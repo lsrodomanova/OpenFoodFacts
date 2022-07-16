@@ -1,4 +1,4 @@
-package tests;
+package tests.api;
 
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
@@ -11,7 +11,7 @@ import static org.hamcrest.Matchers.containsString;
 public class Specs {
     public static RequestSpecification request = with()
             .baseUri("https://world.openfoodfacts.org")
-            .basePath("/api/v2")
+            .basePath("/tests/api/v2")
             .log().all()
             .contentType(ContentType.JSON)
             ;

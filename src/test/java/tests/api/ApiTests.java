@@ -1,18 +1,18 @@
-package tests;
+package tests.api;
 
-import models.RequestCreate;
-import models.ProductData;
+import tests.api.models.RequestCreate;
+import tests.api.models.ProductData;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static tests.Specs.*;
+import static tests.api.Specs.*;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Tag("api")
+@Tag("tests/api")
 public class ApiTests {
 
 

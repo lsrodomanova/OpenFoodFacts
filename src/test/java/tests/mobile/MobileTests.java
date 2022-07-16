@@ -1,4 +1,4 @@
-package mobiletests;
+package tests.mobile;
 
 import com.codeborne.selenide.Selenide;
 import io.appium.java_client.AppiumBy;

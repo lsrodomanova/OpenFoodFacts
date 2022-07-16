@@ -1,4 +1,4 @@
-package steps;
+package tests.web;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.*;

@@ -1,6 +1,6 @@
-package helpers;
+package tests.mobile;
 
-import config.BrStackConfig;
+import tests.mobile.BrStackConfig;
 import org.aeonbits.owner.ConfigFactory;
 
 import static io.restassured.RestAssured.given;

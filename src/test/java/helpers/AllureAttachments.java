@@ -4,6 +4,7 @@ import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import tests.mobile.Browserstack;
 
 import java.nio.charset.StandardCharsets;
 
