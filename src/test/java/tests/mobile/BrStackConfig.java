@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "classpath:brstack.properties"
+        "classpath:properties/brstack.properties"
 })
 
 public interface BrStackConfig extends Config {
