@@ -3,9 +3,6 @@ package tests.web;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
-//import config.CredentialsConfig;
-//import helpers.Attach;
-import helpers.AllureAttachments;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
@@ -13,7 +10,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import static io.qameta.allure.Allure.step;
 
 public class TestBase {
     static WebConfig config = ConfigFactory.create(WebConfig.class);
@@ -43,9 +39,9 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        AllureAttachments.screenshotAs("Last screenshot");
-        AllureAttachments.pageSource();
-        //AllureAttachments.browserConsoleLogs();
-        //AllureAttachments.addVideo();
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
     }
 }
