@@ -11,7 +11,7 @@ import static org.hamcrest.Matchers.containsString;
 public class Specs {
     public static RequestSpecification request = with()
             .baseUri("https://world.openfoodfacts.org")
-            .basePath("/tests/api/v2")
+            .basePath("/api/v2")
             .log().all()
             .contentType(ContentType.JSON)
             ;
@@ -42,7 +42,7 @@ public class Specs {
 
     public static ResponseSpecification responseSpec = new ResponseSpecBuilder()
             .expectStatusCode(200)
-            .expectBody(containsString ("Nutella t630"))
+            .expectBody(containsString ("Coca-Cola"))
             .build();
 
     public static ResponseSpecification responseCategory = new ResponseSpecBuilder()

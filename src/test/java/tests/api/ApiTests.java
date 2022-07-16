@@ -14,7 +14,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("api")
-public class ApiTests extends TestBase{
+public class ApiTests {
 
 
     String
@@ -32,7 +32,7 @@ public class ApiTests extends TestBase{
         given()
                 .spec(request)
                 .when()
-                .get("/product/59032823")
+                .get("/product/04963406")
                 .then()
                 .spec(responseSpec)
                 .log().body()
