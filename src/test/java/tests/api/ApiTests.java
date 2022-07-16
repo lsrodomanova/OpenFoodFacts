@@ -19,7 +19,6 @@ public class ApiTests {
     String
             body = "{\"user_id\": \"lrodomanova\",\n" +
             "    \"password\": \"Qwerty\"}",
-            //body2 ="{\"code\": \"04963406\"}",
             status="1",
             status_verbose="fields saved",
             productName="/cheese",
