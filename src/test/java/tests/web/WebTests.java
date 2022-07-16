@@ -44,11 +44,11 @@ public class WebTests extends TestBase{
                 .checkBarcodeList();
     }
 
-    @Test
+    /*@Test
     @DisplayName("Перейти в App Store на страницу приложения")
     void findHref() {
         steps
                 .goToAppstore()
                 .chekHref();
-    }
+    }*/
 }
