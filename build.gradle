@@ -14,20 +14,6 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-def allureVersion = "2.14.0",
-    selenideVersion = "5.24.0",
-    junitVersion = "5.7.2"
-
-allure {
-    version = allureVersion
-    autoconfigure = true
-    aspectjweaver = true
-    configuration = "testImplementation"
-    useJUnit5 {
-        version = allureVersion
-    }
-}
-
 dependencies {
     testImplementation(
             "io.rest-assured:rest-assured:4.3.1",
@@ -39,9 +25,25 @@ dependencies {
             "org.assertj:assertj-core:3.22.0",
             "io.appium:java-client:8.0.0",
             "io.qameta.allure:allure-selenide:2.17.3",
+            "io.qameta.allure:allure-rest-assured:2.17.3",
             "org.slf4j:slf4j-simple:1.7.32",
             "com.codeborne:selenide:6.5.2",
-            "commons-io:commons-io:2.11.0")
+            "commons-io:commons-io:2.11.0",
+            "org.aspectj:aspectjweaver:1.9.6")
+}
+
+def allureVersion = "2.17.3",
+    selenideVersion = "5.24.0",
+    junitVersion = "5.7.2"
+
+allure {
+    version = allureVersion
+    autoconfigure = true
+    aspectjweaver = true
+    configuration = "testImplementation"
+    useJUnit5 {
+        version = allureVersion
+    }
 }
 
 compileTestJava {
