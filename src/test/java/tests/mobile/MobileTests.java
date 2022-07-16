@@ -2,6 +2,7 @@ package tests.mobile;
 
 import com.codeborne.selenide.Selenide;
 import io.appium.java_client.AppiumBy;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -15,6 +16,7 @@ public class MobileTests extends TestBaseM {
             password = "Qwerty";
 
     @Test
+    @DisplayName("Тест onboarding")
     void onBoardingTest() {
 
         step("Первая страница", () -> {
@@ -41,6 +43,7 @@ public class MobileTests extends TestBaseM {
     }
 
     @Test
+    @DisplayName("Проверка перехода на главную страницу")
     void mainScreen() {
         step("Открыть главную страницу", () -> {
             Selenide.sleep(10000);
@@ -64,6 +67,7 @@ public class MobileTests extends TestBaseM {
         });
     }
     @Test
+    @DisplayName("Авторизация")
     void auth() {
         step("Открыть меню авторизации", () -> {
             Selenide.sleep(10000);
@@ -85,6 +89,7 @@ public class MobileTests extends TestBaseM {
         });
     }
     @Test
+    @DisplayName("Поиск продукта по названию")
     void searchProductByName() {
         step("Открыть меню поиска", () -> {
             Selenide.sleep(10000);
