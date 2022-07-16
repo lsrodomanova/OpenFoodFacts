@@ -5,6 +5,7 @@ import tests.api.models.ProductData;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import tests.web.TestBase;
 
 import static io.restassured.RestAssured.given;
 import static tests.api.Specs.*;
@@ -13,7 +14,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("api")
-public class ApiTests {
+public class ApiTests extends TestBase{
 
 
     String
