@@ -1,4 +1,4 @@
-## Проект по автоматизации тестирования сайта openfoodfacts.org"
+## Проект по автоматизации тестирования сайта openfoodfacts.org
 > <a target="_blank" href="https://world.openfoodfacts.org/">Ссылка на главную страницу сайта</a>
 ### <img width="100%" title="Zaryad" src="images/logo/logo.svg">
 ## Описание проекта
