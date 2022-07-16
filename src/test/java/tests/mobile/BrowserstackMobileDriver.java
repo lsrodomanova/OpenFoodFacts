@@ -12,32 +12,32 @@ import java.net.URL;
 
 public class BrowserstackMobileDriver implements WebDriverProvider {
 
-    static BrStackConfig mconfig = ConfigFactory.create(BrStackConfig.class);
+    static BrStackConfig config = ConfigFactory.create(BrStackConfig.class);
 
     @Override
     public WebDriver createDriver(Capabilities capabilities) {
         MutableCapabilities mutableCapabilities = new MutableCapabilities();
         mutableCapabilities.merge(capabilities);
-        mutableCapabilities.setCapability("browserstack.user", mconfig.login());
-        mutableCapabilities.setCapability("browserstack.key", mconfig.key());
+        mutableCapabilities.setCapability("browserstack.user", config.login());
+        mutableCapabilities.setCapability("browserstack.key", config.key());
 
 
-        mutableCapabilities.setCapability("app", mconfig.appURL());
+        mutableCapabilities.setCapability("app", config.appURL());
 
 
-        mutableCapabilities.setCapability("device", mconfig.device());
-        mutableCapabilities.setCapability("os_version", mconfig.osVersion());
+        mutableCapabilities.setCapability("device", config.device());
+        mutableCapabilities.setCapability("os_version", config.osVersion());
 
 
-        mutableCapabilities.setCapability("project", mconfig.project());
-        mutableCapabilities.setCapability("build", mconfig.build());
-        mutableCapabilities.setCapability("name", mconfig.name());
+        mutableCapabilities.setCapability("project", config.project());
+        mutableCapabilities.setCapability("build", config.build());
+        mutableCapabilities.setCapability("name", config.name());
         return new RemoteWebDriver(getBrowserstackUrl(), mutableCapabilities);
     }
 
     public static URL getBrowserstackUrl() {
         try {
-            return new URL(mconfig.baseURL());
+            return new URL(config.baseURL());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

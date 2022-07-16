@@ -11,15 +11,15 @@ import static io.qameta.allure.Allure.step;
 
 @Tag("android")
 public class MobileTests extends TestBaseM {
-    String alogin = mobConfig.login(),
-            apassword = mobConfig.password();
+    String login = "lrodomanova",
+            password = "Qwerty";
 
     @Test
     void onBoardingTest() {
 
         step("Первая страница", () -> {
-            Selenide.sleep(10000);
-            $(AppiumBy.id("android:id/aerr_wait")).click();
+            Selenide.sleep(500);
+            //$(AppiumBy.id("android:id/aerr_wait")).click();
             $(AppiumBy.xpath("//android.widget.TextView[2]")).
                     shouldHave(text("Scan products, take them in picture, make food transparency happen"));
         });
@@ -44,7 +44,7 @@ public class MobileTests extends TestBaseM {
     void mainScreen() {
         step("Открыть главную страницу", () -> {
             Selenide.sleep(10000);
-            $(AppiumBy.id("android:id/aerr_wait")).click();
+            //$(AppiumBy.id("android:id/aerr_wait")).click();
             $(AppiumBy.id("org.openfoodfacts.scanner:id/btn_next")).click();
             $(AppiumBy.id("org.openfoodfacts.scanner:id/btn_next")).click();
             $(AppiumBy.id("org.openfoodfacts.scanner:id/btn_next")).click();
@@ -67,7 +67,7 @@ public class MobileTests extends TestBaseM {
     void auth() {
         step("Открыть меню авторизации", () -> {
             Selenide.sleep(10000);
-            $(AppiumBy.id("android:id/aerr_wait")).click();
+            //$(AppiumBy.id("android:id/aerr_wait")).click();
             $(AppiumBy.id("org.openfoodfacts.scanner:id/btn_next")).click();
             $(AppiumBy.id("org.openfoodfacts.scanner:id/btn_next")).click();
             $(AppiumBy.id("org.openfoodfacts.scanner:id/btn_next")).click();
@@ -77,8 +77,8 @@ public class MobileTests extends TestBaseM {
         });
         step("Ввести логин и пароль", () -> {
             //$(AppiumBy.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.EditText")).click();
-            $(AppiumBy.id("org.openfoodfacts.scanner:id/loginInput")).sendKeys(alogin);
-            $(AppiumBy.id("org.openfoodfacts.scanner:id/pass_input")).sendKeys(apassword);
+            $(AppiumBy.id("org.openfoodfacts.scanner:id/loginInput")).sendKeys(login);
+            $(AppiumBy.id("org.openfoodfacts.scanner:id/pass_input")).sendKeys(password);
             $(AppiumBy.id("org.openfoodfacts.scanner:id/btn_login")).click();
             $(AppiumBy.id("org.openfoodfacts.scanner:id/tvDailyFoodFact"))
                     .shouldHave(text("Survey: tell Open Food Facts what to build next"));
@@ -88,7 +88,7 @@ public class MobileTests extends TestBaseM {
     void searchProductByName() {
         step("Открыть меню поиска", () -> {
             Selenide.sleep(10000);
-            $(AppiumBy.id("android:id/aerr_wait")).click();
+            //$(AppiumBy.id("android:id/aerr_wait")).click();
             $(AppiumBy.id("org.openfoodfacts.scanner:id/btn_next")).click();
             $(AppiumBy.id("org.openfoodfacts.scanner:id/btn_next")).click();
             $(AppiumBy.id("org.openfoodfacts.scanner:id/btn_next")).click();

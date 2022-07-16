@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Tag("tests/api")
+@Tag("api")
 public class ApiTests {
 
 

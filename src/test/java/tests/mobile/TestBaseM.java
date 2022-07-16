@@ -16,16 +16,16 @@ import static helpers.AllureAttachments.sessionId;
 import static io.qameta.allure.Allure.step;
 
 public class TestBaseM {
-    static LocalConfig mobConfig = ConfigFactory.create(LocalConfig.class);
+    //static LocalConfig mobConfig = ConfigFactory.create(LocalConfig.class);
     static String deviceHost = System.getProperty("deviceHost", "local");
     @BeforeAll
     public static void setup() {
 
-        if (Objects.equals(deviceHost, "local")) {
-            Configuration.browser = LocalDriver.class.getName();
-        } else {
+        //if (Objects.equals(deviceHost, "local")) {
+            //Configuration.browser = LocalDriver.class.getName();
+        //} else {
             Configuration.browser = BrowserstackMobileDriver.class.getName();
-        }
+       // }
         Configuration.browserSize = null;
     }
 

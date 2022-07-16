@@ -41,8 +41,8 @@ public class LocalDriver implements WebDriverProvider {
         options.setDeviceName(deviceName);
         options.setPlatformVersion(osLocalVersion);
         options.setApp(app.getAbsolutePath());
-        //options.setAppPackage("org.wikipedia.alpha");
-        //options.setAppActivity("org.wikipedia.main.MainActivity");
+        options.setAppPackage("org.openfoodfacts.scanner");
+        options.setAppActivity("openfoodfacts.github.scrachx.openfood.features.splash.SplashActivity");
 
         return new AndroidDriver(getAppiumServerUrl(), options);
     }
