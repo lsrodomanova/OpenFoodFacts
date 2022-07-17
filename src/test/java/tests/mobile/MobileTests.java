@@ -15,9 +15,9 @@ import static io.qameta.allure.Allure.step;
 
 @Tag("android")
 public class MobileTests extends TestBaseM {
-    static LocalConfig localConfig = ConfigFactory.create(LocalConfig.class);
-    String login = localConfig.login(),
-            password = localConfig.password(),
+
+    String login = "lrodomanova",
+            password = "Qwerty",
             product="cola";
 
     @Test
@@ -26,7 +26,7 @@ public class MobileTests extends TestBaseM {
 
         step("Первая страница", () -> {
             Selenide.sleep(10000);
-            $(AppiumBy.id("android:id/aerr_wait")).click();
+            //$(AppiumBy.id("android:id/aerr_wait")).click();
             $(AppiumBy.xpath("//android.widget.RelativeLayout/android.widget.TextView[2]")).
                     shouldHave(text("Scan products, take them in picture, make food transparency happen"));
         });
