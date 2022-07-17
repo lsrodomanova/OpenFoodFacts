@@ -1,23 +1,25 @@
 package tests.mobile;
 
-import helpers.AllureAttachments;
+import tests.mobile.drivers.BrowserstackMobileDriver;
+import tests.mobile.helpers.AllureAttachments;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import tests.mobile.drivers.LocalDriver;
+
 import java.util.Objects;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static helpers.AllureAttachments.sessionId;
+import static tests.mobile.helpers.AllureAttachments.sessionId;
 import static io.qameta.allure.Allure.step;
 
 public class TestBaseM {
     //static LocalConfig mobConfig = ConfigFactory.create(LocalConfig.class);
-    static String deviceHost = System.getProperty("deviceHost", "local");
+    //static String deviceHost = System.getProperty("deviceHost", "local");
     @BeforeAll
     public static void setup() {
 
@@ -25,7 +27,7 @@ public class TestBaseM {
             //Configuration.browser = LocalDriver.class.getName();
         //} else {
             Configuration.browser = BrowserstackMobileDriver.class.getName();
-       // }
+      // }
         Configuration.browserSize = null;
     }
 
@@ -37,7 +39,7 @@ public class TestBaseM {
 
     @AfterEach
     public void afterEach() {
-        //String deviceHost = System.getProperty("deviceHost", "local");
+        String deviceHost = System.getProperty("deviceHost", "local");
 
         String sessionId = sessionId();
         AllureAttachments.screenshotAs("Last screenshot");

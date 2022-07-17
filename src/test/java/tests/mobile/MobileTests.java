@@ -2,27 +2,32 @@ package tests.mobile;
 
 import com.codeborne.selenide.Selenide;
 import io.appium.java_client.AppiumBy;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import tests.mobile.config.LocalConfig;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
+
 @Tag("android")
 public class MobileTests extends TestBaseM {
-    String login = "lrodomanova",
-            password = "Qwerty";
+    static LocalConfig localConfig = ConfigFactory.create(LocalConfig.class);
+    String login = localConfig.login(),
+            password = localConfig.password(),
+            product="cola";
 
     @Test
     @DisplayName("Тест onboarding")
     void onBoardingTest() {
 
         step("Первая страница", () -> {
-            Selenide.sleep(500);
-            //$(AppiumBy.id("android:id/aerr_wait")).click();
-            $(AppiumBy.xpath("//android.widget.TextView[2]")).
+            Selenide.sleep(10000);
+            $(AppiumBy.id("android:id/aerr_wait")).click();
+            $(AppiumBy.xpath("//android.widget.RelativeLayout/android.widget.TextView[2]")).
                     shouldHave(text("Scan products, take them in picture, make food transparency happen"));
         });
         step("Вторая страница", () -> {
@@ -80,7 +85,6 @@ public class MobileTests extends TestBaseM {
             $(AppiumBy.xpath("//android.view.ViewGroup[9]/android.widget.TextView")).click();
         });
         step("Ввести логин и пароль", () -> {
-            //$(AppiumBy.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.EditText")).click();
             $(AppiumBy.id("org.openfoodfacts.scanner:id/loginInput")).sendKeys(login);
             $(AppiumBy.id("org.openfoodfacts.scanner:id/pass_input")).sendKeys(password);
             $(AppiumBy.id("org.openfoodfacts.scanner:id/btn_login")).click();
@@ -101,9 +105,9 @@ public class MobileTests extends TestBaseM {
             $(AppiumBy.id("android:id/search_button")).click();
         });
         step("Найти продукт по названию", () -> {
-            $(AppiumBy.id("android:id/search_src_text")).sendKeys("macaron");
+            $(AppiumBy.id("android:id/search_src_text")).sendKeys(product+"\\n");
             $(AppiumBy.id("org.openfoodfacts.scanner:id/textCountProduct")).shouldHave(text("Number of results:"));
-            $(AppiumBy.className("android.widget.TextView")).shouldHave(text("Macaron:"));;
+            $(AppiumBy.xpath("//android.widget.TextView[1]")).shouldHave(text(product));;
         });
     }
 }

@@ -1,4 +1,4 @@
-package tests.web;
+package tests.web.webconfig;
 
 import org.aeonbits.owner.Config;
 

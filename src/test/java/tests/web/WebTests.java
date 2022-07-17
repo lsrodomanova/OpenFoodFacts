@@ -3,6 +3,7 @@ package tests.web;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import tests.web.helper.WebSteps;
 
 @Tag("web")
 public class WebTests extends TestBase{
@@ -44,11 +45,11 @@ public class WebTests extends TestBase{
                 .checkBarcodeList();
     }
 
-    /*@Test
+    @Test
     @DisplayName("Перейти в App Store на страницу приложения")
     void findHref() {
         steps
                 .goToAppstore()
                 .chekHref();
-    }*/
+    }
 }

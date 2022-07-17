@@ -5,12 +5,9 @@ import tests.api.models.ProductData;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.web.TestBase;
 
 import static io.restassured.RestAssured.given;
 import static tests.api.Specs.*;
-import static org.hamcrest.Matchers.hasItem;
-import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("api")
@@ -48,8 +45,7 @@ public class ApiTests {
                 .get("/suggest.pl?tagtype=categories&term=sh")
                 .then()
                 .spec(responseCategory)
-                .log().body()
-                ;
+                .log().body();
     }
 
     @Test
@@ -83,9 +79,6 @@ public class ApiTests {
     void addProduct() {
         RequestCreate requestCreate = new RequestCreate();
         requestCreate.setCode(code);
-        //requestCreate.setUser_id("lrodomanova");
-        //requestCreate.setPassword("Qwerty");
-
         ProductData data= given()
                 .spec(addProduct)
                 .body(requestCreate)

@@ -1,4 +1,4 @@
-package tests.mobile;
+package tests.mobile.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
 import org.aeonbits.owner.ConfigFactory;
@@ -6,6 +6,7 @@ import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import tests.mobile.config.BrStackConfig;
 
 import java.net.MalformedURLException;
 import java.net.URL;

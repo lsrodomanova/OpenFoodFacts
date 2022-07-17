@@ -1,4 +1,4 @@
-package tests.web;
+package tests.web.helper;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.*;
@@ -10,13 +10,18 @@ public class WebSteps {
     String country="France",
             country2="Russia",
             product="barilla",
-            barcode="5449000000996";
+            barcode="5449000000996",
+            text1="List of countries - World",
+            text2="Products sold in France",
+            text3="Open Food Facts - Россия",
+            text4="Barilla",
+            text5="Coca-Cola - 33cl";
 
     public WebSteps searchByCountry() {
         step("Выбрать поиск по стране", () -> {
             $x("//button[@class='button dropdown small']").click();
             $(byLinkText("Countries")).click();
-            $("#main_column").shouldHave(text("List of countries - World"));
+            $("#main_column").shouldHave(text(text1));
         });
         return this;
     }
@@ -24,7 +29,7 @@ public class WebSteps {
     public WebSteps chooseCountry() {
         step("Выбрать страну и проверить", () -> {
             $(byLinkText(country)).click();
-            $("#main_column").shouldHave(text("Products sold in France"));
+            $("#main_column").shouldHave(text(text2));
         });
         return this;
     }
@@ -40,7 +45,7 @@ public class WebSteps {
 
     public WebSteps checkCountry() {
         step("Проверить страну", () -> {
-            $("#main_column").shouldHave(text("Open Food Facts - Россия"));
+            $("#main_column").shouldHave(text(text3));
         });
         return this;
     }
@@ -55,7 +60,7 @@ public class WebSteps {
 
     public WebSteps checkList() {
         step("Проверить список", () -> {
-            $("#products_all").shouldHave(text("Barilla"));
+            $("#products_all").shouldHave(text(text4));
         });
         return this;
     }
@@ -69,7 +74,7 @@ public class WebSteps {
 
     public WebSteps checkBarcodeList() {
         step("Проверить список", () -> {
-            $x("//div[@itemscope]").shouldHave(text("Coca-Cola - 33cl"));
+            $x("//div[@itemscope]").shouldHave(text(text5));
         });
         return this;
     }
@@ -85,5 +90,4 @@ public class WebSteps {
         });
         return this;
     }
-
 }
