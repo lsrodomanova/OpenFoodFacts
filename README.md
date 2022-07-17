@@ -61,13 +61,16 @@ gradle clean android
 ### Список кейсов в отчёте Allure
 ![This is an image](images/screenshots/allurereport.png)
 
-
-###К каждому тесту в отчете прилагается видео.
+## Видео прохождения тестов
+> К каждому тесту в отчете прилагается видео.
 <p align="center">
-  <img title="Web Video" src="images/screenshots/web.gif">
-<p/>
-Видео прохождения мобильного теста.
+  <img title="Web Video" src="images/screenshots/web.gif" >
+</p>
 
+> Видео прохождения мобильного теста.
+<p align="center">
+  <img title="Mobile Video" src="images/screenshots/mobile.gif" >
+</p>
 
 ### Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
 ![This is an image](images/screenshots/Telegram.jpg)
