@@ -62,7 +62,7 @@ gradle clean android
 ![This is an image](images/screenshots/allurereport.png)
 
 
-> ###К каждому тесту в отчете прилагается видео.
+###К каждому тесту в отчете прилагается видео.
 <p align="center">
   <img title="Web Video" src="images/screenshots/web.gif">
 <p/>
