@@ -69,7 +69,7 @@ gradle clean android
 
 > Видео прохождения мобильного теста.
 <p align="center">
-  <img title="Selenoid Video" src="images/screenshots/mobile.gif" >
+  <img title="Mobile Video" src="images/screenshots/mobile.gif" >
 </p>
 
 ### Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
