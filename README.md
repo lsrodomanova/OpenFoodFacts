@@ -73,4 +73,4 @@ gradle clean android
 </p>
 
 ### Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
-![This is an image](images/screenshots/Telegram.jpg)
+![This is an image](images/screenshots/Telegram.png)
