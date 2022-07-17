@@ -62,15 +62,12 @@ gradle clean android
 ![This is an image](images/screenshots/allurereport.png)
 
 
-> К каждому тесту в отчете прилагается видео.
+> ###К каждому тесту в отчете прилагается видео.
 <p align="center">
-  <img title="Selenoid Video" src="images/screenshots/web.gif" >
-</p>
+  <img title="Web Video" src="images/screenshots/web.gif">
+<p/>
+Видео прохождения мобильного теста.
 
-> Видео прохождения мобильного теста.
-<p align="center">
-  <img title="Mobile Video" src="images/screenshots/mobile.gif" >
-</p>
 
 ### Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
 ![This is an image](images/screenshots/Telegram.jpg)
