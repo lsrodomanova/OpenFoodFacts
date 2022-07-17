@@ -61,8 +61,6 @@ gradle clean android
 ### Список кейсов в отчёте Allure
 ![This is an image](images/screenshots/allurereport.png)
 
-## Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
-![This is an image](images/screenshots/Telegram.png)
 
 > К каждому тесту в отчете прилагается видео.
 <p align="center">
@@ -73,3 +71,6 @@ gradle clean android
 <p align="center">
   <img title="Selenoid Video" src="images/screenshots/mobile.gif" >
 </p>
+
+### Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
+![This is an image](images/screenshots/Telegram.jpg)

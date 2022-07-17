@@ -7,6 +7,4 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class RequestCreate {
     private String code;
-    //private String user_id;
-    //private String password;
 }
