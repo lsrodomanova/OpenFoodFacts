@@ -52,7 +52,6 @@ gradle clean android
 ## Отчёты о результатах сборок, списки тесткейсов, аналитические dashboards хранятся в Allure TestOps
 > <a target="_blank" href="https://allure.autotests.cloud/project/1468/dashboards">Сссылка на проект в AllureTestOps</a> (запрос доступа admin@qa.guru)
 
-![This is an image](images/screenshots/testops.png)
 
 ![This is an image](images/screenshots/testops2.png)
 
