@@ -8,7 +8,7 @@
 Сайт позволяет получать подробную информацию о продуктах, выпускаемых во всем мире, а также самому добавлять продукты, которых нет в базе.
 
 ###  Проект реализован с использованием:
-<p align="center">IntelliJ IDEA Java Gradle Selenide Selenoid JUnit5 Jenkins Allure Report Allure TestOps Telegram </p>
+
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg">
 <img width="6%" title="Java" src="images/logo/Java.svg">
