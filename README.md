@@ -44,7 +44,9 @@ gradle clean android
 ```
 ## Запуск автотестов выполняется на сервере Jenkins
 
-![This is an image](images/screenshots/jenkins1.png)
+> <a target="_blank" href="https://jenkins.autotests.cloud/job/lrodomanova_diploma_openfoodfacts">Ссылка на проект в Jenkins</a>
+
+![This is an image](images/screenshots/jenkins.png)
 
 Для запуска тестов выбрать пункт **"Собрать сейчас"**
 
