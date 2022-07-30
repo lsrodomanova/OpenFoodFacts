@@ -56,20 +56,20 @@ public class Pages {
         return this;
     }
 
-    @Step("Проверить список")
+    @Step("Проверить список продуктов после поиска")
     public Pages checkList(String productName) {
         $("#products_all").shouldHave(text(productName));
         return this;
     }
 
-    @Step("Ввести продукт в строку поиска")
+    @Step("Ввести баркод продукта в строку поиска")
     public Pages printBarcode(String barcode) {
         $x("(//input[@type='text'])[1]").setValue(barcode);
         $x("//button[@title='Search']").click();
         return this;
     }
 
-    @Step("Проверить список")
+    @Step("Проверить список продуктов по баркоду")
     public Pages checkBarcodeList(String checkBarcode) {
         $x("//div[@itemscope]").shouldHave(text(checkBarcode));
         return this;
