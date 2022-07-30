@@ -12,7 +12,6 @@ import openfood.web.helper.Attach;
 import openfood.web.config.WebConfig;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-
 public class TestBase {
     static WebConfig config = ConfigFactory.create(WebConfig.class);
     Pages pages = new Pages();
